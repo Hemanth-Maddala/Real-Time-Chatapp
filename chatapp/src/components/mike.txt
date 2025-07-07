@@ -1,0 +1,30 @@
+in chatarea we used the mike with speech to text conversion
+there we used listening , reset of transcript, stopping
+to enable mike:
+    1. check the control pannel (to check whether microphone working or not)
+        1. go to settings search for control pannel
+        2. click on sound 
+        3. go to recordings
+        4. enable the microphone-array and set as default 
+    2. check whether google was allowed to microphone in windows
+        1. Give Chrome permission to access mic
+        2. Open Settings → Privacy & security → Microphone
+        3. Ensure Chrome is listed as a permitted app.
+        4. Look for a section titled:
+            “Let desktop apps access your microphone”(because chrome is desktop icon)
+        5. Make sure it's set to ON.
+    3. in localhost where your are using the microphone(in my case it is react)
+        1. in our url:- http://localhost/5173 u can see info or lock icon 
+        2. click on it 
+        3. then open site settings and enable microphone
+        4. which means that for that particular site the microphone permissionn was enabled
+    4. chrome://settings/content/microphone use this to check which websites are using microphone
+
+
+*******
+react i18next hook for multiple language support
+Custom Emojis & GIFs
+react-media-recorder
+Dark / Light Theme Toggle
+Typing Indicators
+*******
