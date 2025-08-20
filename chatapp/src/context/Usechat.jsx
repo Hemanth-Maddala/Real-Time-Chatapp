@@ -23,7 +23,7 @@ const Usechat = (props) => {
             return;
         }
         try {
-            const response = await fetch("http://localhost:3000/user/userdetails", {
+            const response = await fetch("https://real-time-chatapp-1-0iom.onrender.com/user/userdetails", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const Usechat = (props) => {
 
     const getuserfrnds = async () => {
         try {
-            const response = await fetch("http://localhost:3000/message/userfrnd", {
+            const response = await fetch("https://real-time-chatapp-1-0iom.onrender.com/message/userfrnd", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -98,7 +98,7 @@ const Usechat = (props) => {
 
     const getmessages = async (userId) => {   // selected and our user messages
         try {
-            const response = await fetch(`http://localhost:3000/message/convo/${userId}`, {
+            const response = await fetch(`https://real-time-chatapp-1-0iom.onrender.com/message/convo/${userId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -120,7 +120,7 @@ const Usechat = (props) => {
 
     const sendmessage = async (newMessage) => {
         try {
-            const response = await fetch(`http://localhost:3000/message/send/${selectedUser._id}`, {
+            const response = await fetch(`https://real-time-chatapp-1-0iom.onrender.com/message/send/${selectedUser._id}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -163,7 +163,7 @@ const Usechat = (props) => {
             if (newmessage.senderId === selectedUser?._id) {
                 newmessage.seen = true;
                 setMessages((prevMessages) => [...prevMessages, newmessage]);
-                await fetch(`http://localhost:3000/message/mark/${newmessage._id}`, {
+                await fetch(`https://real-time-chatapp-1-0iom.onrender.com/message/mark/${newmessage._id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
