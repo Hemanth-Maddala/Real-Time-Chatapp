@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 // ✅ Configure CORS properly
 const corsOptions = {
-    origin: "https://real-time-chatapp-1-0iom.onrender.com", // frontend origin
+    origin: "https://real-time-chatapp-frontend-saze.onrender.com/", // frontend origin
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "token"],
     credentials: true
@@ -72,7 +72,7 @@ const jwt = require("jsonwebtoken");
 passport.use(new google({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://real-time-chatapp-1-0iom.onrender.com/auth/google/callback",
+    callbackURL: "https://real-time-chatapp-frontend-saze.onrender.com/auth/google/callback",
     passReqToCallback: true
 }, async (req, accessToken, refreshToken, profile, done) => {
     try {
@@ -117,7 +117,7 @@ app.get('/auth/google/callback',
         expiresIn: "7d"
     });
     console.log("Generated token:", token);
-    res.redirect(`https://real-time-chatapp-1-0iom.onrender.com/?token=${token}`);
+    res.redirect(`https://real-time-chatapp-frontend-saze.onrender.com/?token=${token}`);
 }
 );
 
