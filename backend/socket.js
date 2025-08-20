@@ -31,7 +31,7 @@ let io; // 🔁 io is declared here, assigned later
 function setupSocket(server) {
     io = new Server(server, {
         cors: {
-            origin: "https://real-time-chatapp-1-0iom.onrender.com",
+            origin: "https://real-time-chatapp-frontend-saze.onrender.com",
             methods: ["GET", "POST"]
         }
     });
