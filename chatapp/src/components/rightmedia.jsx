@@ -4,6 +4,7 @@ import Chatcontext from '../context/Chatcontext'
 const Rightmedia = ({ setMobileView }) => {
   const { selectedUser, messages, userdet, onlineUsers } = useContext(Chatcontext)
   const [mediaMessages, setMediaMessages] = useState([])
+  const [previewImage, setPreviewImage] = useState(null)
 
   useEffect(() => {
     if (messages && Array.isArray(messages)) {
@@ -71,6 +72,7 @@ const Rightmedia = ({ setMobileView }) => {
             {mediaMessages.map((message, index) => (
               <div key={message._id || index} className="relative group">
                 <img
+                  onClick={() => setPreviewImage(message.image)}
                   src={message.image}
                   alt={`Shared media ${index + 1}`}
                   className="w-full h-32 object-cover rounded-lg cursor-pointer"
@@ -85,6 +87,18 @@ const Rightmedia = ({ setMobileView }) => {
           <p className="text-gray-400 text-center">No media shared yet</p>
         )}
       </div>
+      {previewImage && (
+        <div
+          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+          onClick={() => setPreviewImage(null)}
+        >
+          <img
+            src={previewImage}
+            alt="Preview"
+            className="max-w-full max-h-full rounded-lg"
+          />
+        </div>
+      )}
     </div>
   )
 }
