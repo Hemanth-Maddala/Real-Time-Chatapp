@@ -11,6 +11,9 @@ const crypto = require("crypto");
 dotenv.config();
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
 // ✅ Configure CORS properly
 const corsOptions = {
     origin: "http://localhost:5173", // frontend origin
