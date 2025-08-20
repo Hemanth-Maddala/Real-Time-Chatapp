@@ -89,7 +89,7 @@ const Leftfrnds = ({ setMobileView }) => {
         return
       }
 
-      const response = await fetch('http://localhost:3000/user/updateprofile', {
+      const response = await fetch('https://real-time-chatapp-1-0iom.onrender.com/user/updateprofile', {
         method: 'PUT',
         headers: {
           "Content-Type": "application/json",
