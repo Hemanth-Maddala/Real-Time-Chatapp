@@ -72,7 +72,7 @@ const jwt = require("jsonwebtoken");
 passport.use(new google({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/callback",
+    callbackURL: "https://real-time-chatapp-1-0iom.onrender.com/auth/google/callback",
     passReqToCallback: true
 }, async (req, accessToken, refreshToken, profile, done) => {
     try {
@@ -117,7 +117,7 @@ app.get('/auth/google/callback',
         expiresIn: "7d"
     });
     console.log("Generated token:", token);
-    res.redirect(`http://localhost:5173/?token=${token}`);
+    res.redirect(`https://real-time-chatapp-1-0iom.onrender.com/?token=${token}`);
 }
 );
 
