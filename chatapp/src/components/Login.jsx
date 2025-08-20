@@ -24,7 +24,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch("http://localhost:3000/user/login", {
+      const response = await fetch("https://real-time-chatapp-1-0iom.onrender.com/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -120,7 +120,7 @@ const Login = () => {
           <div>
             <button
               type="button"
-              onClick={() => window.location.href = "http://localhost:3000/auth/google"}
+              onClick={() => window.location.href = "https://real-time-chatapp-1-0iom.onrender.com/auth/google"}
               className="w-full flex items-center justify-center gap-2 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
             >
               <img
