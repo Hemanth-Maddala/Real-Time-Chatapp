@@ -72,7 +72,7 @@ const jwt = require("jsonwebtoken");
 passport.use(new google({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://real-time-chatapp-frontend-saze.onrender.com/auth/google/callback",
+    callbackURL: "https://real-time-chatapp-1-0iom.onrender.com/auth/google/callback",
     passReqToCallback: true
 }, async (req, accessToken, refreshToken, profile, done) => {
     try {
