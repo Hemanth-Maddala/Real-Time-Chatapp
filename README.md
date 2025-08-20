@@ -9,6 +9,7 @@ Real-time chat application
 - Ensured **scalable architecture** supporting multi-user communication with WebSocket protocols.
 
 How to use
+- It is a **Vite+React project** with backend **Express.js** and **Node.js**
 
 **step-1**
 - In chatapp folder , run **cd chatapp** to open chatapp folder from chattingapp folder
