@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 // ✅ Configure CORS properly
 const corsOptions = {
-    origin: "https://real-time-chatapp-frontend-saze.onrender.com/", // frontend origin
+    origin: "https://real-time-chatapp-frontend-saze.onrender.com", // frontend origin
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "token"],
     credentials: true
