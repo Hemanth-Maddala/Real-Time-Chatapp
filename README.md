@@ -12,9 +12,9 @@ How to use
 - It is a **Vite+React project** with backend **Express.js** and **Node.js**
 
 **step-1**
-- In chatapp folder , run **cd chatapp** to open chatapp folder from chattingapp folder
-- then run **npm run dev**
+- In chatapp folder , run **"cd chatapp"** to open chatapp folder from chattingapp folder
+- then run **"npm run dev"**
 
 **step-2**
-- In backend folder , run **cd backend** to open backend folder from chattingapp folder
-- then run **nodemon app.js**
+- In backend folder , run **"cd backend"** to open backend folder from chattingapp folder
+- then run **"nodemon app.js"**
