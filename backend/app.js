@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 // ✅ Configure CORS properly
 const corsOptions = {
-    origin: "http://localhost:5173", // frontend origin
+    origin: "https://real-time-chatapp-1-0iom.onrender.com", // frontend origin
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "token"],
     credentials: true
