@@ -50,7 +50,7 @@ const Usechat = (props) => {
             if (!userdet || socket?.connected) {
                 return;
             }
-            const newSocket = io("http://localhost:3000", {
+            const newSocket = io("https://real-time-chatapp-1-0iom.onrender.com", {
                 query: {
                     userId: userdet._id
                 }
